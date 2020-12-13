@@ -26,43 +26,53 @@ const styles = StyleSheet.create({
         width : "90%",
         margin : 10,
     },
-    textboxView : {
+    TextFormInputView  : {
         backgroundColor : '#EBF2F5',
         padding : 10,
         borderWidth : 0,
-        margin : 10,
         flex : 1,
+        height : '100%',
+        
+        
     },
     textBoldView : {
         fontWeight : 'bold',
-
     },
     textSublimeBoldView : {
         fontWeight : 'bold',
-        //fontStyle : 'italic',
         textDecorationLine : 'underline',
         color : "#235E9D",
     },
     squareView : {
         height :15,
-        backgroundColor : 'blue',
-        flex : 1
+        backgroundColor : '#235E9D',
+        height : "100%",
+        flex : 1,
+        maxWidth : 30,
+
     },
     horizontalView : {
         display : 'flex',
-        flexDirection : 'column'
+        flexDirection : 'row',
+        alignItems : 'center',
+        justifyContent : 'center',
+        marginTop : 10,
+        marginBottom : 10,
+        minWidth : '100%',
+        
+
     },
     circleView : {
         borderRadius : 50,
         flex : 1,
         borderWidth : 2,
-        width : 30,
-        height : 30,   
+        maxWidth : 50,
+        maxHeight : 50,  
+        minWidth : 50,
+        minHeight : 50,
         marginHorizontal : 10,
         borderColor : "#235E9D",
-
     }
-
 })
 
 
@@ -109,9 +119,9 @@ const Login = (props) => (
         <Text style = {styles.textBoldView}>Entre com</Text>
         <RadioButtonOptions options = {options}/>
         <Text>ou</Text>
-        <View style = {{width : '100%', alignItems : 'center', justifyContent : 'center'}}>
-            <TextFormInput placeholder = "Email" style = {styles.textboxView}/>
-            <TextFormInput placeholder = "Senha" passwordRules style = {styles.textboxView}/>
+        <View style = {{minWidth : '100%',alignItems : 'center', justifyContent : 'center',}}>
+            <TextFormInput placeholder = "Email" style = {styles.TextFormInputView }/>
+            <TextFormInput placeholder = "Senha" passwordRules style = {styles.TextFormInputView }/>
         </View>
             <TouchableOpacity style = {styles.buttonStyle}><Text>Entrar</Text></TouchableOpacity>
             <Text>ou</Text>
