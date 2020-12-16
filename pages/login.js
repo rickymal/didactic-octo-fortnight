@@ -8,6 +8,8 @@ import {
   View,
 } from "react-native";
 
+import MTextInput from '../components/MTextInput'
+import Gstyles from '../components/Gstyles'
 const options = [
   {
     key: "pay",
@@ -22,7 +24,7 @@ const options = [
 const s = StyleSheet.create({
   textBaseView: {
     fontWeight: "bold",
-    color: "#7A7A7A",
+    color: Gstyles.color.secondary,
     marginVertical: 20,
   },
   radioCircleButtonViewButtonView: {
@@ -31,22 +33,12 @@ const s = StyleSheet.create({
     borderRadius: 100,
     borderWidth: 2,
     backgroundColor: "white",
-    borderColor: "#235E9D",
+    borderColor: Gstyles.color.primary,
     marginHorizontal: 10,
     marginVertical: 5,
   },
-  textBoxInputView: {
-    minWidth: 50,
-    minHeight: 50,
-    marginVertical: 2,
-    fontSize: 20,
-    backgroundColor: "#EBF2F5",
-    paddingHorizontal: 5,
-    flex: 1,
-    height: "100%",
-  },
   buttonStyle: {
-    backgroundColor: "#235E9D",
+    backgroundColor: Gstyles.color.primary,
     minHeight: 40,
     minWidth: 15,
     fontSize: 15,
@@ -62,7 +54,7 @@ const s = StyleSheet.create({
 const Square = (props) => (
   <View
     style={{
-      backgroundColor: "#235E9D",
+      backgroundColor: Gstyles.color.primary,
       minHeight: 5,
       minWidth: 5,
       flex: 1,
@@ -82,11 +74,8 @@ const TextBox = (props) => (
       justifyContent: "center",
     }}
   >
-    <Square />
-    <TextInput
-      style={s.textBoxInputView}
-      placeholder={props.placeholder}
-    ></TextInput>
+    <Square />    
+    <MTextInput placeholder = {props.placeholder}/>
   </View>
 );
 
@@ -145,7 +134,7 @@ const Login = (props) => (
     <Text
       style={{
         ...s.textBaseView,
-        ...{ textDecorationLine: "underline", color: "#235E9D" },
+        ...{ textDecorationLine: "underline", color: Gstyles.color.primary },
       }}
     >
       Registre-se
