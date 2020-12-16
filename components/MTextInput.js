@@ -15,6 +15,7 @@ const MTextInput = props => (
     paddingHorizontal: 5,
     flex: 1,
     height: "100%",
+    ...props.style
   }} placeholder = {props.placeholder}/>
 )
 
