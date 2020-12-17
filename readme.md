@@ -17,8 +17,8 @@ yarn start
 
 ## Changes in Commit
 ---
-Design changes in login page that has been created
-Creation of Student dashboard page
+-Design changes in login page that has been created
+-Creation of Student dashboard page
 ---
 
 
