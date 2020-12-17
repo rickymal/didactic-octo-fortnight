@@ -160,10 +160,10 @@ function createRows(data, columns) {
   return data; // [F]
 }
 
-const numberOf_columns = 4;
+const numberOf_columns = 5;
 
 const TeamDashboard = (props) => (
-  <View style={{ flex: 1 }}>
+  <View style={{ flex: 1, alignContent : 'center',justifyContent : 'center', width : '100%' }}>
     <MTextInput
       placeholder="Procurar times..."
       style={{
@@ -173,7 +173,7 @@ const TeamDashboard = (props) => (
         paddingLeft: 20,
       }}
     />
-    <SafeAreaView style={{ flex: 1 }}>
+    <SafeAreaView style={{ flex: 1, alignContent : 'center', justifyContent : 'center', }}>
       <FlatList
         data={createRows(data.teamListInfo, numberOf_columns)}
         keyExtractor={(e) => e.id}
@@ -198,7 +198,7 @@ const DStudent = (props) => (
     style={{
       width: "100%",
       height: "100%",
-      backgroundColor: Gstyles.color.backGround,
+      backgroundColor: 'transparent',
     }}
   >
     <View style={{ flex: 1, alignContent: "center", justifyContent: "center" }}>
