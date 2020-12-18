@@ -2,13 +2,13 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import Login from './pages/login'
-import DStudent from './pages/Dashboards/DStudent'
-import NDStudent from './pages/Dashboards/NDStudent'
+
+import DStudentTeamList from './pages/Dashboards/StudentDashboard/DStudentTeamList'
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <Login/>
+      <DStudentTeamList/>
     </SafeAreaView>
   );
 }

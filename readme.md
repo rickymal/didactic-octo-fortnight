@@ -23,7 +23,6 @@ yarn start
 
 
 <div align = "center">
-    | Login     | Dashboard      |
-    |------------|-------------|
-    |<img src = "image/img1.jpg"> | <img src = "image/img2.jpg">
+    <img src = "image/img1.jpg">
+    <img src = "image/img2.jpg">
 </div>
