@@ -3,12 +3,14 @@ import React from 'react';
 import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import Login from './pages/login'
 
+
 import DStudentTeamList from './pages/Dashboards/StudentDashboard/DStudentTeamList'
+import DStudentMentoringList from './pages/Dashboards/StudentDashboard/DStudentMentoringList'
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <DStudentTeamList/>
+      <DStudentMentoringList/>
     </SafeAreaView>
   );
 }

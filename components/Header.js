@@ -6,23 +6,32 @@ import {
 } from "react-native";
 import Profile  from './Profile'
 // {profileSize : constants.profileSize} props.constants
-const Header = (props) => (
-    <View
-      style={{
-        flex: 1,
-        backgroundColor: "transparent",
-        maxHeight: 300,
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignContent: "center",
-        alignItems: "center",
-      }}
-    >
-  
-  
-      <Text style={{fontSize: props.constant - 10,}}>{props.teamName}</Text>
-      <Profile constant = {props.constant}/>
-    </View>
-  );
+//45
+const Header = (props) => {
+    let c = null
+    if (!props.constant){
+        c = 45
+    } else {
+        c = props.constant
+    }
+    return (
+        <View
+          style={{
+            flex: 1,
+            backgroundColor: "transparent",
+            maxHeight: 120,
+            flexDirection: "row",
+            justifyContent: "space-between",
+            alignContent: "center",
+            alignItems: "center",
+          }}
+        >
+      
+      
+          <Text style={{fontSize: c - 10,}}>{props.title}</Text>
+          <Profile constant = {c}/>
+        </View>
+      );
+}
 
 export default Header

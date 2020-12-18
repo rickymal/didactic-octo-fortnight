@@ -6,7 +6,7 @@ Front End making with react native
 Usa the package manager [yarn](https://yarnpkg.com/) to use this package
 
 ## using
-With Yarn install.. follow these steps
+With Yarn install, follow these steps
 
 ```bash
 npm install
@@ -15,11 +15,18 @@ npm install
 yarn start
 ```
 
-## Changes in Commit
+## Done
 ---
 -Design changes in login page that has been created
--Creation of Student dashboard page
 ---
+
+## Changes in Commit
+---
+-Finalization of Student dashboard page
+-Creation of mentoring dashboard
+---
+
+
 
 
 <div align = "center">

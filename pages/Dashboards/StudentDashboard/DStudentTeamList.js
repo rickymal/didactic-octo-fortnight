@@ -92,7 +92,7 @@ const Dashboard = (props) => (
 
 const DStudentTeamList = (props) => (
   <View style={{ width: "100%", height: "100%", }}>
-    <Header constant = {constants.profileSize} teamName = "Equipicão" />
+    <Header constant = {constants.profileSize} title = "Equipes" />
     <Text style={[s.textViewTitle,{fontSize : 10, color : 'red', alignSelf : 'center', marginBottom :5,}]}>Você não está em uma equipe</Text>
     <Dashboard/>
   </View>
