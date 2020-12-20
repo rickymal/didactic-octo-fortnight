@@ -28,7 +28,7 @@ const Header = (props) => {
         >
       
       
-          <Text style={{fontSize: c - 10,}}>{props.title}</Text>
+          <Text style={{fontSize: c - 10, marginLeft : 20,}}>{props.title}</Text>
           <Profile constant = {c}/>
         </View>
       );

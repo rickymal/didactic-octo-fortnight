@@ -6,11 +6,13 @@ import Login from './pages/login'
 
 import DStudentTeamList from './pages/Dashboards/StudentDashboard/DStudentTeamList'
 import DStudentMentoringList from './pages/Dashboards/StudentDashboard/DStudentMentoringList'
+import DStudentMainDashboard from './pages/Dashboards/StudentDashboard/DStudentMainDashboard'
+
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <DStudentMentoringList/>
+      <DStudentMainDashboard/>
     </SafeAreaView>
   );
 }
