@@ -48,7 +48,7 @@ const MentoringList = props => {
 
   return (
   
-    <SafeAreaView style = {{backgroundColor : 'green', flex : 1}}>
+    <SafeAreaView style = {{backgroundColor : 'transparent', flex : 1}}>
         {props.isMentor ? <FlatList
         data = {[{}]}
         renderItem={() => <MentorItem/>}

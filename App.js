@@ -4,10 +4,11 @@ import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import Login from './pages/login'
 
 
-import DStudentTeamList from './pages/Dashboards/StudentDashboard/DStudentTeamList'
-import DStudentMentoringList from './pages/Dashboards/StudentDashboard/DStudentMentoringList'
-import DStudentMainDashboard from './pages/Dashboards/StudentDashboard/DStudentMainDashboard'
+import DStudentTeamList from './pages/Dashboards/Student/DStudentTeamList'
+import DStudentMentoringList from './pages/Dashboards/Student/DStudentMentoringList'
+import DStudentMainDashboard from './pages/Dashboards/Student/DStudentMainDashboard'
 
+import DMentoringMentoringList from './pages/Dashboards/Mentoring/DMentoringMentoringList'
 
 export default function App() {
   return (
