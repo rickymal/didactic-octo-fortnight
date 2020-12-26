@@ -85,7 +85,7 @@ const Dashboard = (props) => (
     style={{ flexDirection: "column", flex: 6, backgroundColor: "white" }}
   >
       <MTextInput style = {{maxHeight : 20,paddingLeft : 20,}} placeholder = "Buscar equipes"/>
-      <TeamList/>
+      <TeamList />
 
   </View>
 );
