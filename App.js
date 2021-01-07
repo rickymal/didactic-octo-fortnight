@@ -8,7 +8,8 @@ import DStudentTeamList from './pages/Dashboards/Student/DStudentTeamList'
 import DStudentMentoringList from './pages/Dashboards/Student/DStudentMentoringList'
 import DStudentMainDashboard from './pages/Dashboards/Student/DStudentMainDashboard'
 import DStudentMentoringOptionMentor from './pages/Dashboards/Student/DStudentMentoringOptionMentor'
-
+import DStudentMentoringListNew from './pages/Dashboards/Student/DStudentMentoringListNew'
+import DChallengeList from './pages/Dashboards/DChallengeList'
 import DMentoringMentoringList from './pages/Dashboards/Mentoring/DMentoringMentoringList'
 
 
@@ -38,11 +39,12 @@ const mainPage = props => {
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName = "Home">
+      <Stack.Navigator initialRouteName = "DChallengeList">
         <Stack.Screen name = "Home" component = {mainPage}  options = {{title : 'Home Page'}}/>
         <Stack.Screen name = "Teamlist" component = {DStudentTeamList} options = {{title : 'Team List'}} />
         <Stack.Screen name = "Mentoringlist" component = {DStudentMentoringList} options = {{title : 'Mentoring List'}} />
         <Stack.Screen name = "MentoringOptions" component = {DStudentMentoringOptionMentor} options = {{title : 'Options for mentoring'}} />
+        <Stack.Screen name = "DChallengeList" component = {DChallengeList} options = {{title : 'Challenge Options'}}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

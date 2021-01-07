@@ -30,7 +30,7 @@ const Circle = props => {
     }
 
     return (
-        <TouchableOpacity
+        <TouchableOpacity onPress = {props.onPress}
             style={{
                 minWidth: props.constant,
                 minHeight: props.constant,

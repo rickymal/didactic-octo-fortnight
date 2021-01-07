@@ -41,7 +41,7 @@ const TeamList = props => (
   <ScrollView>
     <View style = {{flexDirection : 'row', flexWrap : 'wrap', justifyContent : 'center'}}>
 
-          <Circle style = {buttonStyle} newTeam/>
+          <Circle style = {buttonStyle} newTeam onPress = {() => alert('oi')}/>
           <Circle style = {buttonStyle} textInput = "T1"/>
           <Circle style = {buttonStyle} textInput = "T1"/>
           <Circle style = {buttonStyle} textInput = "T1"/>
@@ -93,7 +93,7 @@ const Dashboard = (props) => (
 const DStudentTeamList = (props) => (
   <View style={{ width: "100%", height: "100%", }}>
     <Header constant = {constants.profileSize} title = "Equipes" />
-    <Text style={[s.textViewTitle,{fontSize : 10, color : 'red', alignSelf : 'center', marginBottom :5,}]}>Você não está em uma equipe</Text>
+    <Text style={[s.textViewTitle,{fontSize : 10, color : 'red', alignSelf : 'center', marginBottom :5}]}>Você não está em uma equipe</Text>
     <Dashboard/>
   </View>
 );

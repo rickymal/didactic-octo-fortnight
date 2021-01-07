@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
 
 const Item = (props) => {
 
-  console.log("propriedades importantes")
+  console.log("propriedades importantes!!")
   console.log(JSON.stringify(props))
   return (
     <TouchableOpacity style={styles.item} onPress = {() => props.navigation.navigate(props.historyEvent, props.dataParams)}> 
@@ -86,7 +86,7 @@ const MentoringList = (props) => {
         renderItem={(data) => {
           return (
             <TouchableWithoutFeedback>
-              <Item name={data.item.name} historyEvent = {data.item.historyEvent}  navigation = {props.navigation}/>
+              <Item name={data.item.name} historyEvent = {data.item.historyEvent}  navigation = {props.navigation} dataParams = {data.item.dataParams}/>
             </TouchableWithoutFeedback>
           )
         }}
