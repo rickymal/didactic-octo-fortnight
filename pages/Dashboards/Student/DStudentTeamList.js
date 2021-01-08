@@ -16,6 +16,8 @@ import MTextInput from "../../../components/MTextInput";
 import Header from '../../../components/Header'
 import Circle from '../../../components/Circle'
 
+import { useNavigation } from '@react-navigation/native'
+
 const constants = {
     profileSize: 45,
 };
@@ -41,7 +43,7 @@ const TeamList = props => (
   <ScrollView>
     <View style = {{flexDirection : 'row', flexWrap : 'wrap', justifyContent : 'center'}}>
 
-          <Circle style = {buttonStyle} newTeam onPress = {() => alert('oi')}/>
+          <Circle style = {buttonStyle} newTeam onPress = {() => props.history.push("DChallengeList")}/>
           <Circle style = {buttonStyle} textInput = "T1"/>
           <Circle style = {buttonStyle} textInput = "T1"/>
           <Circle style = {buttonStyle} textInput = "T1"/>
@@ -80,15 +82,18 @@ const TeamList = props => (
   </ScrollView>
 )
 
-const Dashboard = (props) => (
-  <View
-    style={{ flexDirection: "column", flex: 6, backgroundColor: "white" }}
-  >
-      <MTextInput style = {{maxHeight : 20,paddingLeft : 20,}} placeholder = "Buscar equipes"/>
-      <TeamList />
-
-  </View>
-);
+const Dashboard = (props) => {
+  const history = useNavigation()
+  return (
+    <View
+      style={{ flexDirection: "column", flex: 6, backgroundColor: "white" }}
+    >
+        <MTextInput style = {{maxHeight : 20,paddingLeft : 20,}} placeholder = "Buscar equipes" />
+        <TeamList history = {history}/>
+  
+    </View>
+  );
+}
 
 const DStudentTeamList = (props) => (
   <View style={{ width: "100%", height: "100%", }}>

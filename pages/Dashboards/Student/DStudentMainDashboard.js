@@ -99,8 +99,8 @@ const MentoringList = (props) => {
 const DStudentMainDashboard = (props) => {
   function handle() {
     api.get("test").then(function (e) {
-      alert(e.data);
-      alert(e.status);
+      //alert(e.data);
+      //alert(e.status);
     });
   }
 

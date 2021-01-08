@@ -3,6 +3,7 @@ import React from 'react';
 import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import Login from './pages/login'
 
+import {useEffect} from 'react'
 
 import DStudentTeamList from './pages/Dashboards/Student/DStudentTeamList'
 import DStudentMentoringList from './pages/Dashboards/Student/DStudentMentoringList'
@@ -15,6 +16,7 @@ import DMentoringMentoringList from './pages/Dashboards/Mentoring/DMentoringMent
 
 import {NavigationContainer} from '@react-navigation/native'
 import {createStackNavigator} from '@react-navigation/stack'
+import api from './services/api';
 
 function HomeScreen() {
   return (
@@ -37,9 +39,17 @@ const mainPage = props => {
 }
 
 export default function App() {
+  
+  useEffect(function(){
+    try {
+      api.get(`login/?username=rickymal&password=123456789`,)
+    } catch {
+      alert("Didn't work")
+    }
+  },[])
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName = "DChallengeList">
+      <Stack.Navigator initialRouteName = "Home">
         <Stack.Screen name = "Home" component = {mainPage}  options = {{title : 'Home Page'}}/>
         <Stack.Screen name = "Teamlist" component = {DStudentTeamList} options = {{title : 'Team List'}} />
         <Stack.Screen name = "Mentoringlist" component = {DStudentMentoringList} options = {{title : 'Mentoring List'}} />
